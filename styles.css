@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(R.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes msg{
+    0%{
+        right: -1000px;
+    }
+    100%{
+        right:0px;}
+}
+@keyframes heading {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes name {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 30px;
+    }
+}
+@keyframes name2 {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 10px;
+    }
+}
+@keyframes boxes{
+    0%{
+        left: -1000px;
+
+    }
+    100%
+    {
+        left: 0px;
+    }
+}
+@keyframes reset{
+    0%{
+        bottom: -1000px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+.container {
+    width: 100vw;
+    margin-top: 30px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    width: 98.35vw;
+    padding: 10px;
+    font-size: 3rem;
+    color:#f1faee ;
+    position: relative;
+    /* background-color: #1b4965; */
+    font-family: 'Times New Roman', Times, serif;
+    animation: heading 2s ease-in-out;
+}
+
+.game {
+    width: 60vmin;
+    height: 60vmin;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+   
+}
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1.5rem;
+    background-color: #5fa8d3;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    font-size: 8vmin;
+    cursor: pointer;
+    position: relative;
+    animation: boxes 2s ease-in-out;
+}
+.reset {
+    width: 55vmin;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    animation: reset 2s ease-in-out;
+
+}
+.msgContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(R\ \(1\).jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: msg 1s ease-in-out;
+    
+
+}
+
+#msg {
+    font-size: 3rem;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 20px 0;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 1000;
+   
+    
+}
+#new {
+    width: 55vmin;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 2rem;
+    border-radius: 20px;
+    font-weight: 900;
+    border: 4px solid green;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0b486b, #0b546b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.name1{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    animation: name 2s ease-in-out;
+
+}
+.name2{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    animation: name2 2s ease-in-out;
+}
+input{
+    padding: 8px;
+    margin: 20px 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase ;
+    background-color: transparent;
+    position: relative;
+    bottom: 6px;
+}
+input::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.o-color {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .x-color {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @media(max-width:900px){
+    .name1{
+        position: relative;
+        top: 10px;
+        left: 0;
+    }
+    .name2{
+        position: relative;
+        top: 10px;
+        left: 0;
+        
+    }
+    .container{
+        height: 50vh;
+    }
+     body{
+        height: 105vh;
+    }
+  }
+  
